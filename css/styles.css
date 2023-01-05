@@ -34,6 +34,9 @@ h1,h2,h3,ul,li{
     margin-top: 0;
     margin-bottom: 0;
 }
+ul{
+    list-style: none;
+}
 img{
     display:block;
     max-width: 100%;
@@ -152,6 +155,10 @@ img{
       url(../images/people-office\ 1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    width:1440px;
+    background-position:center;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 .hero-heading{
@@ -197,6 +204,15 @@ img{
     letter-spacing:0.02em;
     color:var(--brand-color);
 }
+.adv-icon{
+    width:264px;
+    height:112px;
+    background-color: #F4F4FD;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .workerstitle{
     white-space: nowrap;
 }
@@ -230,30 +246,6 @@ img{
     line-height: 1.5;
     letter-spacing:0.02em;
 }
-.adv-list-item::before{
-  content: '';
-  height: 112px;
-  display: block;
-  background-color: var(--section-background-color);
-  border-radius: 4px;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-  
-}
-.icon-group::before{
-    background-image: url(../images/Group.png);
-}
-.icon-clock::before{
-    background-image: url(../images/clock\ 1.png);
-}
-.icon-diagram::before{
-    background-image: url(../images/diagram\ 1.png);
-
-}
-.icon-austranaut::before{
-    background-image: url(../images/astronaut\ 1.png);
-}
 
 
 .workexamples-studio{
@@ -286,8 +278,7 @@ img{
 }
 
 .workers-soc-list{
-    margin-left: 16px;
-    margin-right: 16px;
+    
     padding: 0;
     display: flex;
     gap:24px;
@@ -297,7 +288,7 @@ img{
 .workers-soc-item{
     width: 40px;
     height: 40px;
-    list-style-type: none;
+    
 }
 .workers-soc-link{
     width: 100%;
@@ -308,7 +299,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor:pointer;
+    
  
 }
 .workers-soc-link:hover,
@@ -330,11 +321,13 @@ img{
 
 }
 
-    
+.clients-item{
+    width:calc((100% - 120px) / 6);
+}   
 
 .clients-link{
     
-    width:168px;
+   
     height:88px;
     border: 1px solid #8E8F99;
     border-radius: 4px;
@@ -485,8 +478,10 @@ img{
 
 /*---------container portfolio------------*/
 
-.link{
+.item-link{
   text-decoration: none;
+  display: block;
+  
 }
 .workexamples-portfolio{
     list-style-type: none;
@@ -501,12 +496,12 @@ img{
     width: calc((100% - 48px) / 3);
 
 }
-.example-item:hover,
-.example-item:focus{
-    box-shadow: 0px 1px 6px rgba(46 , 47, 66, 0.08);
+.item-link:hover,
+.item-link:focus{
+    box-shadow: 0px 1px 6px rgba(46,47,66 ,0.08), 0px 1px 1px rgba(46 ,47 ,66,0.16),0px 2px 1px rgba(46,47,66,0.08);
 }
 
-.link .title{
+.item-link .title{
     font-weight:600;
     font-size: 20px;
     line-height:1.5;
@@ -514,7 +509,6 @@ img{
     color:var(--brand-color);
     
 }
-
 
 
 
@@ -530,9 +524,10 @@ img{
 
 .img-cont-portfolio{
     padding:32px 16px 32px 16px;
-    box-shadow: 0px 1px 6px rgba(46,47 ,66 , 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16 ), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    
     border:0.05px solid var(--section-background-color);
     border-top: 0;
+    box-shadow: 0px 1px 6px rgba(46,47,66 ,0.08);
     
 }
 
